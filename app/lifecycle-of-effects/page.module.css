@@ -1,0 +1,50 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.paragraphSection {
+}
+
+.componentListSection {
+}
+
+.componentListSection ul {
+  padding-left: 1rem;
+}
+
+.effectSection {
+}
+
+.soloEffectSection code {
+  display: block;
+}
+
+.chatRoomSection div {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.main input {
+  width: 15rem;
+}
+
+.main button {
+  padding: 0.5rem 1rem;
+}
+
+.main a {
+  color: mediumpurple;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
+.main p {
+  margin-bottom: 0.5rem;
+}

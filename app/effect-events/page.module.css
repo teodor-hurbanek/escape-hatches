@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.paragraphSection {
+}
+
+.limitationsSection {
+}
+
+.limitationsSection ul {
+  padding-left: 1rem;
+}
+
+.playgroundSection {
+}
+
+/* .main input {
+  width: 15rem;
+} */
+
+.main button {
+  padding: 0.5rem 1rem;
+}
+
+.main a {
+  color: mediumpurple;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
+.main p {
+  margin-bottom: 0.5rem;
+}
