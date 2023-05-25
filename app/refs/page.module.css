@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+  padding: 1rem;
+}
+
+.focusSection {
+  display: flex;
+}
+
+.timeSection {
+}
+
+.main input {
+  width: 15rem;
+}
+
+.main button {
+  padding: 0.5rem 1rem;
+}
