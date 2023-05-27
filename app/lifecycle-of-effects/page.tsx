@@ -49,6 +49,10 @@ export default function Effects() {
 
       <section className={styles.soloEffectSection}>
         <h3>Each Effect in your code should represent a separate and independent synchronization process.</h3>
+        <p>
+          If these Effects were comined, deleting one Effect wouldn’t break the other Effect’s logic. This means they
+          synchronize different things, and it’s good to split them up.
+        </p>
         <code>{'function ChatRoom({ roomId }) {'}</code>
         <code style={{ paddingLeft: '1rem' }}>{'useEffect(() => {'}</code>
         <code style={{ paddingLeft: '2rem' }}>{'logVisit(roomId);'}</code>

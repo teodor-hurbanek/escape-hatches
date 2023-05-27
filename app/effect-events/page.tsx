@@ -1,21 +1,23 @@
 'use client'
 import { experimental_useEffectEvent, useEffect, useState } from 'react'
+import Input from '@/components/UI/Input'
 import styles from './page.module.css'
 
 export default function EffectEvents() {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [canMove, setCanMove] = useState(true)
 
-  const onMove = experimental_useEffectEvent((e: any) => {
-    if (canMove) {
-      setPosition({ x: e.clientX, y: e.clientY })
-    }
-  })
+  // TODO: fix error: TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_1__.experimental_useEffectEvent) is not a function
+  // const onMove = experimental_useEffectEvent((e: any) => {
+  //   if (canMove) {
+  //     setPosition({ x: e.clientX, y: e.clientY })
+  //   }
+  // })
 
-  useEffect(() => {
-    window.addEventListener('pointermove', onMove)
-    return () => window.removeEventListener('pointermove', onMove)
-  }, [])
+  // useEffect(() => {
+  //   window.addEventListener('pointermove', onMove)
+  //   return () => window.removeEventListener('pointermove', onMove)
+  // }, [])
 
   return (
     <main className={styles.main}>
@@ -50,7 +52,12 @@ export default function EffectEvents() {
 
       <section className={styles.playgroundSection}>
         <label>
-          <input type="checkbox" checked={canMove} onChange={e => setCanMove(e.target.checked)} />
+          <Input
+            type={'checkbox'}
+            checked={canMove}
+            onChange={(e: any) => setCanMove(e.target.checked)}
+            style={{ marginRight: '.3em' }}
+          />
           The dot is allowed to move
         </label>
         <hr />

@@ -8,32 +8,30 @@
 .paragraphSection {
 }
 
-.componentListSection {
+.timerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.componentListSection ul {
-  padding-left: 1rem;
+.timerSection div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.effectSection {
+.valuesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.soloEffectSection p {
+.valuesSection p {
   margin-bottom: 1rem;
 }
 
-.soloEffectSection code {
+.valuesSection code {
   display: block;
-}
-
-.chatRoomSection div {
-  display: flex;
-  gap: 0.3rem;
-  align-items: center;
-}
-
-.main input {
-  width: 15rem;
 }
 
 .main button {
@@ -46,8 +44,4 @@
 
 .main a:hover {
   text-decoration: underline;
-}
-
-.main p {
-  margin-bottom: 0.5rem;
 }
