@@ -7,7 +7,7 @@ import styles from './page.module.css'
 
 const chatData = ['general', 'travel', 'music']
 
-export default function Effects() {
+export default function LifecycleOfEffects() {
   const [roomId, setRoomId] = useState('general')
   const [showChat, setShowChat] = useState(false)
 

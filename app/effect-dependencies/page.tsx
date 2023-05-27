@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback } from 'react'
 import Button from '@/components/UI/Button'
 import styles from './page.module.css'
 
-export default function EffectEvents() {
+export default function EffectDependencies() {
   const [count, setCount] = useState(0)
   const [increment, setIncrement] = useState(0)
 

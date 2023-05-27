@@ -4,7 +4,7 @@ import Input from '@/components/UI/Input'
 import Button from '@/components/UI/Button'
 import styles from './page.module.css'
 
-export default function Ref() {
+export default function Refs() {
   const [startTime, setStartTime] = useState<number | null>(null)
   const [now, setNow] = useState<number | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
