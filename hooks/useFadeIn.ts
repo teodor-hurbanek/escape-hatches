@@ -4,16 +4,18 @@ export function useFadeIn(ref: any, duration: number) {
   useEffect(() => {
     const node = ref.current
 
-    let startTime: any = performance.now()
-    let frameId: any = null
+    let startTime: number | null = performance.now()
+    let frameId: number | null = null
 
     function onFrame(now: number) {
-      const timePassed = now - startTime
-      const progress = Math.min(timePassed / duration, 1)
-      onProgress(progress)
-      if (progress < 1) {
-        // We still have more frames to paint
-        frameId = requestAnimationFrame(onFrame)
+      if (startTime) {
+        const timePassed = now - startTime
+        const progress = Math.min(timePassed / duration, 1)
+        onProgress(progress)
+        if (progress < 1) {
+          // We still have more frames to paint
+          frameId = requestAnimationFrame(onFrame)
+        }
       }
     }
 
@@ -28,7 +30,7 @@ export function useFadeIn(ref: any, duration: number) {
     }
 
     function stop() {
-      cancelAnimationFrame(frameId)
+      cancelAnimationFrame(frameId as number)
       startTime = null
       frameId = null
     }

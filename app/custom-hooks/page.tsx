@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react'
 import styles from './page.module.css'
 import Button from '@/components/UI/Button'
-import { useOnlineStatus } from '@/hooks/useOnlineStatus'
 import SaveButton from '@/components/custom-hooks/SaveButton'
 import StatusBar from '@/components/custom-hooks/StatusBar'
 import Welcome from '@/components/custom-hooks/Welcome'
@@ -67,9 +66,9 @@ export default function CustomHooks() {
         </p>
       </section>
 
-      <section>
+      <section className={styles.fadeInSection}>
         <Button onClick={() => setShow(!show)}>{show ? 'Remove' : 'Show'}</Button>
-        {show && <Welcome />}
+        {show && <Welcome className={styles.welcome} />}
       </section>
     </main>
   )
